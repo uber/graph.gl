@@ -11,4 +11,3 @@ before_install:
 script:
   - yarn install
   - npm run test
-  - npm run website:build
