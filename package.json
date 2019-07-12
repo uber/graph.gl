@@ -1,7 +1,16 @@
 {
   "name": "graph.gl",
   "version": "0.0.1",
-  "description": "Graph.gl",
+  "description": "WebGL2-Powered Visualization Components for Graph Visualization",
+  "keywords": [
+    "graph",
+    "visualization",
+    "force-directed layout",
+    "gpu",
+    "deck.gl",
+    "react",
+    "uber"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "browser": {

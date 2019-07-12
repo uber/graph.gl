@@ -32,12 +32,54 @@ Phase 2 - 2019 Q4 - 2020 Q1
  - Multiple Modules: each layout/computation module should be published as separated modules so we can reduce the code size.
  - Pure JavaScript Support
 
+## Get Started
+```
+import GraphGL, {
+  JSONLoader,
+  NODE_TYPE,
+  D3ForceLayout
+} from 'graph.gl';
+
+const App = ({data}) => {
+  const graph = JSONLoader({
+    json: data,
+    nodeParser: node => ({id: node.id}),
+    edgeParser: edge => ({
+      id: edge.id,
+      sourceId: edge.sourceId,
+      targetId: edge.targetId,
+      directed: true,
+    }),
+  });
+  return (
+    <GraphGL
+      graph={graph}
+      layout={new D3ForceLayout()}
+      nodeStyle={[
+        {
+          type: NODE_TYPE.CIRCLE,
+          radius: 10,
+          fill: 'blue',
+          opacity: 1,
+        },
+      ]}
+      edgeStyle={{
+        stroke: 'black',
+        strokeWidth: 2,
+      }}
+      enableDragging
+    />
+  );
+}
+````
+
+
 ## Setup Dev Environment
 
 #### Clone the repo:
 
 ```
-git clone gitolite@code.uber.internal:vis/graph.gl
+git clone git@github.com:uber-common/graph.gl.git
 ```
 
 #### Install yarn
@@ -80,7 +122,7 @@ yarn cover
 You can add your documentation (markdown) in `docs/` folder and the new chapter in `docs/table-of-contents.json`.
 Open the local website:
 ```
-yarn website-local
+yarn website
 ```
 
 #### Contributing
