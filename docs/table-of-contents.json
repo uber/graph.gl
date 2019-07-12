@@ -1,0 +1,62 @@
+{
+  "id": "table-of-contents",
+  "chapters": [
+    {
+      "title": "Overview",
+      "entries": [
+        {
+          "entry": "docs/README"
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "chapters": [
+        {
+          "title": "GraphGL",
+          "entries": [
+            {
+              "entry": "docs/api-reference/graphgl"
+            },
+            {
+              "entry": "docs/api-reference/node-style"
+            },
+            {
+              "entry": "docs/api-reference/edge-style"
+            }
+          ]
+        },
+        {
+          "title": "Core Data Structures",
+          "entries": [
+            {
+              "entry": "docs/api-reference/graph"
+            },
+            {
+              "entry": "docs/api-reference/node"
+            },
+            {
+              "entry": "docs/api-reference/edge"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced",
+      "entries": [
+        {
+          "entry": "docs/advanced/custom-layout"
+        }
+      ]
+    },
+    {
+      "title": "Experimental",
+      "entries": [
+        {
+          "entry": "docs/experimental/overview"
+        }
+      ]
+    }
+  ]
+}

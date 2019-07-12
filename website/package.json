@@ -1,0 +1,18 @@
+{
+  "name": "graph-gl-website",
+  "description": "Website for graph.gl",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn clean-examples && yarn clean && yarn develop",
+    "clean": "rm -rf ./.cache ./public",
+    "clean-examples": "find ../examples -name node_modules -exec rm -r {} \\;",
+    "develop": "gatsby develop --port=8001 --open",
+    "build": "yarn clean-examples && gatsby build --prefix-paths",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.3.0",
+    "gl": "^4.2.2",
+    "ocular-gatsby": "^1.0.0-alpha.42"
+  }
+}
