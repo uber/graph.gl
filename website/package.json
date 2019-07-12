@@ -6,13 +6,17 @@
     "start": "yarn clean && yarn develop",
     "clean": "rm -rf ./.cache ./public",
     "develop": "gatsby develop --port=8001",
-    "build": "yarn clean && gatsby build --prefix-paths",
+    "build": "yarn clean && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
   },
   "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
     "gatsby": "^2.3.0",
-    "gl": "^4.2.2",
-    "ocular-gatsby": "^1.0.0-alpha.42"
+    "gh-pages": "^2.0.1",
+    "ocular-gatsby": "1.0.0-alpha.42"
   }
 }

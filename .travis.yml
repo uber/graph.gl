@@ -6,7 +6,9 @@ addons:
 node_js:
   - '10'
   - '12'
-install:
-  - yarn
+before_install:
+  - npm install -g yarn
 script:
+  - yarn install
   - npm run test
+  - npm run website:build
