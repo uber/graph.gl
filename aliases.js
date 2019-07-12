@@ -21,7 +21,7 @@
 const path = require('path');
 
 const ALIASES = {
-  '@uber/graph.gl': path.resolve(__dirname, './src'),
+  'graph.gl': path.resolve(__dirname, './src'),
 };
 
 if (module.require) {

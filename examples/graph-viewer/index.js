@@ -8,7 +8,7 @@ import GraphGL, {
   JSONLoader,
   NODE_TYPE,
   randomGraphGenerator,
-} from '@uber/graph.gl';
+} from 'graph.gl';
 
 const DEFAULT_NODE_SIZE = 5;
 

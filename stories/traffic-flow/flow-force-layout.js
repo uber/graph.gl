@@ -1,4 +1,4 @@
-import {BaseLayout, EDGE_TYPE} from '@uber/graph.gl';
+import {BaseLayout, EDGE_TYPE} from 'graph.gl';
 import {mean} from 'd3-array';
 
 const defaultOptions = {
