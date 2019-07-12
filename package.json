@@ -25,7 +25,6 @@
     "test": "jest",
     "test-debugger": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "prettier-all": "prettier --write 'src/**/*.{js,json,css}' 'test/**/*.{js,json,css}' 'examples/**/*.{js,json,css}' 'docs/**/*.{js,json,css}'",
-    "arc-precommit": "npm run lint && npm run cover",
     "-------- STORYBOOK --------": "",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o engdocs",
