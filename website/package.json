@@ -17,6 +17,7 @@
   "devDependencies": {
     "gatsby": "^2.3.0",
     "gh-pages": "^2.0.1",
+    "gl": "^4.2.2",
     "ocular-gatsby": "1.0.0-alpha.42"
   }
 }
