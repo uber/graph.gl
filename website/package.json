@@ -3,12 +3,12 @@
   "description": "Website for graph.gl",
   "license": "MIT",
   "scripts": {
-    "start": "yarn clean-examples && yarn clean && yarn develop",
+    "start": "yarn clean && yarn develop",
     "clean": "rm -rf ./.cache ./public",
-    "clean-examples": "find ../examples -name node_modules -exec rm -r {} \\;",
-    "develop": "gatsby develop --port=8001 --open",
-    "build": "yarn clean-examples && gatsby build --prefix-paths",
-    "serve": "gatsby serve"
+    "develop": "gatsby develop --port=8001",
+    "build": "yarn clean && gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^2.3.0",

@@ -26,14 +26,14 @@ module.exports = {
   DOCS,
   LINK_TO_GET_STARTED: '/docs',
 
-  PROJECT_TYPE: 'phab',
+  PROJECT_TYPE: 'github',
 
   PROJECT_NAME: 'graph.gl',
   PROJECT_ORG: 'uber-common',
-  PROJECT_URL: `https://engdocs.uberinternal.com/graph.gl/gatsby/`,
+  PROJECT_URL: `https://github.com/uber-web/graph.gl`,
   PROJECT_DESC:
     'WebGL2-Powered Visualization Components for Graph Visualization',
-  PATH_PREFIX: `graph.gl/gatsby`,
+  PATH_PREFIX: `/graph.gl`,
 
   FOOTER_LOGO: '',
 
