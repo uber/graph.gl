@@ -38,7 +38,7 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o engdocs",
     "-------- GATSBY WEBSITE --------": "",
-    "website": "cd website && npm run start",
+    "website": "cd website && yarn && npm run start",
     "website:build": "cd website && yarn && yarn build"
   },
   "files": [
