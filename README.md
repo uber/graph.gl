@@ -1,6 +1,13 @@
-# Graph.gl
+<p align="right">
+  <a href="https://travis-ci.com/uber/deck.gl">
+    <img src="https://travis-ci.com/uber-common/graph.gl.svg?token=gPtGo5hNzC9rS7DfHafq&branch=master" alt="build" />
+  </a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl.svg?type=shield"/>
+  </a>
+</p>
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl?ref=badge_shield)
+# Graph.gl
 
 ## Abstract
 Graph.gl is a React component for visualizing large graphs with several utility functions. It can build a highly customizable graph visualization through its composable API. The rendering is powered by deck.gl which is a WebGL based visualization framework.  With Graph.gl, users are enabled to build various type of graph/network applications with minimum efforts while having the capability to extend the existing styles and layouts.
