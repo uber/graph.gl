@@ -1,10 +1,14 @@
 <p align="right">
-  <a href="https://travis-ci.com/uber/deck.gl">
+  <a href="https://travis-ci.com/uber/graph.gl">
     <img src="https://travis-ci.com/uber-common/graph.gl.svg?token=gPtGo5hNzC9rS7DfHafq&branch=master" alt="build" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl?ref=badge_shield" alt="FOSSA Status">
     <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl.svg?type=shield"/>
   </a>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/BF9aOEu.png" height="300" />
 </p>
 
 # Graph.gl
