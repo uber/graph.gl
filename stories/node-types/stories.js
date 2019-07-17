@@ -10,8 +10,15 @@ import GraphGL, {
   MARKER_TYPE,
 } from '../../src';
 // data
-import SAMPLE_GRAPH_DATASETS from '../__fixtures__/sample-datasets';
-const graph = JSONLoader({json: SAMPLE_GRAPH_DATASETS['Random (20, 40)']()});
+const data = {
+  nodes: [
+    {id: 1}, {id: 2}
+  ],
+  edges: [
+    {id: 1, sourceId: 1, targetId: 2}
+  ],
+}
+const graph = JSONLoader({json: data});
 
 // create category
 const stories = storiesOf('Node types', module);
@@ -27,6 +34,7 @@ const shareProps = {
     stroke: '#000',
     strokeWidth: 1,
   },
+  enableDragging: true
 };
 
 stories.add('Circle', () => (

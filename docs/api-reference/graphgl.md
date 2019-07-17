@@ -1,5 +1,9 @@
 # GraphGL
 
+<p align="center">
+  <img src="/images/graph.png" height="200" />
+</p>
+
 ## Usage
 
 ```js

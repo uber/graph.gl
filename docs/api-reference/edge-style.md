@@ -36,7 +36,9 @@ A set of decorators on edges.
 
 ## Decorator: LABEL
 
-TBD - pic
+<p align="center">
+  <img src="/images/edge-styles/label.png" height="200" />
+</p>
 
 #### `text` (String | Function, required)
 - The text of the label.
@@ -70,7 +72,9 @@ The alignment baseline. Available options include 'top', 'center' and 'bottom'.
 
 ## Decorator: FLOW
 
-TBD - pic
+<p align="center">
+  <img src="/images/edge-styles/flow.png" height="200" />
+</p>
 
 #### `color` (String | Array | Function, optional)
 - Default: `[255, 255, 255, 255]`

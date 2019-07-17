@@ -30,7 +30,9 @@ nodeStyle={[
 
 ## CIRCLE type:
 
-TBD - pic
+<p align="center">
+  <img src="/images/node-styles/circle.png" height="100" />
+</p>
 
 #### `fill` (String | Array | Function, optional)
 - Default: `#fff`
@@ -58,7 +60,9 @@ If an accessor function is provided, the function will be called to retrieve the
 
 ## RECTANGLE type:
 
-TBD - pic
+<p align="center">
+  <img src="/images/node-styles/rectangle.png" height="100" />
+</p>
 
 #### `width` (Number | Function, required)
 - The width of the rectancle.
@@ -90,7 +94,9 @@ If a function is provided, it is called on each rectangle to retrieve its outlin
 
 ## MARKER type:
 
-TBD - pic
+<p align="center">
+  <img src="/images/node-styles/marker.png" height="100" />
+</p>
 
 #### `marker` (String | Function, required)
 - Marker can be one of the following types:
@@ -113,7 +119,9 @@ If a color value (hex code, color name, or array) is provided, it is used as the
 
 ## LABEL type:
 
-TBD - pic
+<p align="center">
+  <img src="/images/node-styles/label.png" height="100" />
+</p>
 
 #### `text` (String | Function, required)
 - The text of the label.
