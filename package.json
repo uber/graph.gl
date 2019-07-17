@@ -107,8 +107,6 @@
     "jest-dom": "^2.1.1",
     "mini-css-extract-plugin": "^0.7.0",
     "ngraph.generators": "^18.0.0",
-    "ocular-dev-tools": "^0.0.21",
-    "ocular-gatsby": "^1.0.0-alpha.31",
     "prettier": "^1.15.1",
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.8.6",

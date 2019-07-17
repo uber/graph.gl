@@ -48,7 +48,7 @@ Phase 2 - 2019 Q4 - 2020 Q1
  - Pure JavaScript Support
 
 ## Get Started
-```
+```js
 import GraphGL, {
   JSONLoader,
   NODE_TYPE,

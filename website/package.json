@@ -5,7 +5,7 @@
   "scripts": {
     "start": "yarn clean && yarn develop",
     "clean": "rm -rf ./.cache ./public",
-    "develop": "gatsby develop --port=8001",
+    "develop": "gatsby develop --port=8001 --open",
     "build": "yarn clean && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
@@ -18,6 +18,7 @@
     "gatsby": "^2.3.0",
     "gh-pages": "^2.0.1",
     "gl": "^4.2.2",
+    "ocular-dev-tools": "^0.0.27",
     "ocular-gatsby": "1.0.0-alpha.42"
   }
 }

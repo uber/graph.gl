@@ -4,7 +4,7 @@ TBD - pic
 
 ## Usage
 
-```
+```js
 edgeStyle={{
   stroke: 'black',
   strokeWidth: 2,

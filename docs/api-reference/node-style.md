@@ -4,7 +4,7 @@ Node accessors control the way how users want to render nodes. Layers provide th
 
 ## usage
 Example of nodeStyle:
-```
+```js
 nodeStyle={[
   {
     type: NODE_TYPE.CIRCLE,
@@ -21,7 +21,7 @@ nodeStyle={[
 
 #### `offset` (null | Array, optional)
 - Default: `null`
-- The offset distance from the position of the object. 
+- The offset distance from the position of the object.
 
 #### `scaleWithZoom` (Boolean, optional)
 - Default: `true`
@@ -33,7 +33,7 @@ nodeStyle={[
 TBD - pic
 
 #### `fill` (String | Array | Function, optional)
-- Default: `#fff` 
+- Default: `#fff`
 - The value can be hex code, color name, or color array `[r, g, b, a]` (each component is in the 0 - 255 range).
 If a color value (hex code, color name, or array) is provided, it is used as the global color for all objects.
 If a function is provided, it is called on each rectangle to retrieve its color.
@@ -94,7 +94,7 @@ TBD - pic
 
 #### `marker` (String | Function, required)
 - Marker can be one of the following types:
-```
+```js
 "location-marker-filled", "bell-filled", "bookmark-filled", "bookmark", "cd-filled", "cd", "checkmark", "circle-check-filled", "circle-check", "circle-filled", "circle-i-filled", "circle-i", "circle-minus-filled", "circle-minus", "circle-plus-filled", "circle-plus", "circle-questionmark-filled", "circle-questionmark", "circle-slash-filled", "circle-slash", "circle-x-filled", "circle-x", "circle", "diamond-filled", "diamond", "flag-filled", "flag", "gear", "heart-filled", "heart", "bell", "location-marker", "octagonal-star-filled", "octagonal-star", "person-filled", "person", "pin-filled", "pin", "plus-small", "plus", "rectangle-filled", "rectangle", "star-filled", "star", "tag-filled", "tag", "thumb-down-filled", "thumb-down", "thumb-up", "thumb_up-filled", "triangle-down-filled", "triangle-down", "triangle-left-filled", "triangle-left", "triangle-right-filled", "triangle-right", "triangle-up-filled", "triangle-up", "x-small", "x"
 ```
 - If a string is provided for `marker`, all the objects will use the same marker.
@@ -116,7 +116,7 @@ If a color value (hex code, color name, or array) is provided, it is used as the
 TBD - pic
 
 #### `text` (String | Function, required)
-- The text of the label. 
+- The text of the label.
 - If a string is provided for `text`, all the objects will have the same text.
 - If an accessor function is provided, the function will be called to retrieve the text of each object.
 
