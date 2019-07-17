@@ -27,6 +27,34 @@
           ]
         },
         {
+          "title": "Node style",
+          "entries": [
+            {
+              "entry": "docs/api-reference/node-style-circle"
+            },
+            {
+              "entry": "docs/api-reference/node-style-rectangle"
+            },
+            {
+              "entry": "docs/api-reference/node-style-marker"
+            },
+            {
+              "entry": "docs/api-reference/node-style-label"
+            }
+          ]
+        },
+        {
+          "title": "Edge decorators",
+          "entries": [
+            {
+              "entry": "docs/api-reference/edge-style-label"
+            },
+            {
+              "entry": "docs/api-reference/edge-style-flow"
+            }
+          ]
+        },
+        {
           "title": "Core Data Structures",
           "entries": [
             {
