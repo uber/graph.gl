@@ -19,6 +19,6 @@
     "gh-pages": "^2.0.1",
     "gl": "^4.2.2",
     "ocular-dev-tools": "^0.0.27",
-    "ocular-gatsby": "1.0.0-alpha.42"
+    "ocular-gatsby": "^1.0.0-alpha.44"
   }
 }
