@@ -47,12 +47,7 @@
       "entries": [
         {
           "entry": "docs/advanced/custom-layout"
-        }
-      ]
-    },
-    {
-      "title": "Experimental",
-      "entries": [
+        },
         {
           "entry": "docs/experimental/overview"
         }
