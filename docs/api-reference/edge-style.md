@@ -32,4 +32,4 @@ If a number is provided, it is used as the outline width for all edges.
 If a function is provided, it is called on each rectangle to retrieve its outline width.
 
 #### `decorators` (Array, optional)
-A set of decorators on edges.
+A set of decorators on edges. Please see more detail in the 'Edge decorators' chapter below.

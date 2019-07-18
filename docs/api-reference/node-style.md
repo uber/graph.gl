@@ -17,7 +17,7 @@ nodeStyle={[
 #### `type` (String, required)
 
 - `Type` can only be `CIRCLE`, `MARKER`, `RECTANGLE`, or `LABEL`.
-- Different type of layer may requires different properties. See more details of each layer type below.
+- Different type of layer may requires different properties. See more details in the Node style chapter below.
 
 #### `offset` (null | Array, optional)
 - Default: `null`

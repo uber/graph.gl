@@ -4,7 +4,7 @@ The `Node` class is the base class of the node, which provides a list of basic u
 
 
 ## Constructor
-```
+```js
 new Node(props);
 ```
 

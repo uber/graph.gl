@@ -3,7 +3,7 @@
 The `Graph` class is the base class of the graph.
 
 ## Constructor
-```
+```js
 new Graph(graph);
 ```
 

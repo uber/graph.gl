@@ -4,7 +4,7 @@ The `Edge` class is the base class of the edge.
 
 
 ## Constructor
-```
+```js
 new Edge(props);
 ```
 
