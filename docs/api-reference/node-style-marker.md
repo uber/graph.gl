@@ -1,7 +1,7 @@
 # MARKER
 
 <p align="center">
-  <img src="/images/node-styles/marker.png" height="100" />
+  <img src="/graph.gl/images/node-styles/marker.png" height="100" />
 </p>
 
 #### `marker` (String | Function, required)

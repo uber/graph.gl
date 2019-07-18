@@ -1,7 +1,7 @@
 # LABEL
 
 <p align="center">
-  <img src="/images/edge-styles/label.png" height="200" />
+  <img src="/graph.gl/images/edge-styles/label.png" height="200" />
 </p>
 
 #### `text` (String | Function, required)
