@@ -1,3 +1,175 @@
 # Write your own custom layout
 
-TBD
+
+```js
+import {BaseLayout} from 'graph.gl';
+
+export default class MyLayout extends BaseLayout {
+  // initialize the layout
+  constructor(options) {}
+  // first time to pass the graph data into this layout
+  initializeGraph(graph) {}
+  // update the existing graph
+  updateGraph(grpah) {}
+  // start the layout calculation
+  start() {}
+  // resume the layout calculation
+  resume() {}
+  // stop the layout calculation
+  stop() {}
+  // access the position of the node in the layout
+  getNodePosition(node) {}
+  // access the layout information of the edge
+  getEdgePosition(edge) {}
+  // Pin the node to a designated position, and the node won't move anymore
+  lockNodePosition(node, x, y) {}
+  // Unlock the node, the node will be able to move freely.
+  unlockNodePosition(node) {}
+}
+```
+
+
+
+Let's try to make a `RandomLayout`:
+
+## constructor
+
+In the constructor, you can initialize some internal object you'll need for the layout state.
+The most important part is to create a 'map' to keep the position of nodes.
+
+```js
+export default class RandomLayout extends BaseLayout {
+  constructor(options) {
+    super(options);
+    this._name = 'RandomLayout';
+    this._options = {
+      ...defaultOptions,
+      ...options,
+    };
+    this._nodePositionMap = {};
+  }
+}
+```
+
+
+## Update the graph data
+GraphGL will call `initializeGraph` to pass the graph data into the layout.
+If the graph is the same one but part ofthe data is changed, GraphGL will call `updateGraph` method to notify the layout.
+
+In this case, we can just simply update the `this._nodePositionMap` by going through all nodes in the graph.
+
+```js
+  initializeGraph(graph) {
+    this.updateGraph(graph);
+  }
+
+  updateGraph(grpah) {
+    this._graph = graph;
+    this._nodePositionMap = graph.getNodes().reduce((res, node) => {
+      res[node.getId()] = this._nodePositionMap[node.getId()] || [0, 0];
+      return res;
+    }, {});
+  }
+```
+
+
+## Compute layout
+
+GraphGL will call `start()` of the layout to kick start the layout calculation.
+In this case, the computation is easy as assigning random position for each node only.
+Once the layout is completed, you will need to call `this._callbacks.onLayoutChange()` to notify the render redraw.
+Then call `this._callbacks.onLayoutDone()` to notify the render that layout is completed.
+
+```js
+  start() {
+    const {viewportWidth, viewportHeight} = this._options;
+    this._nodePositionMap = Object.keys(this._nodePositionMap).reduce((res, nodeId) => {
+      res[nodeId] = [Math.random() * viewportWidth, Math.random() * viewportHeight];
+      return res;
+    }, {});
+    this._callbacks.onLayoutChange();
+    this._callbacks.onLayoutDone();
+  }
+```
+
+## Getters
+
+GraphGL will keep retrieving the position of nodes and edges from the layout. You will need to provide two getters `getNodePosition` and `getEdgePosition`.
+
+ - getNodePosition: return the position of the node [x, y].
+ - getEdgePosition: return the rendering information of the edge, including:
+   -- type: the type of the edge, it should be 'LINE', 'SPLINE_CURVE', or 'PATH'.
+   -- sourcePosition: the position of source node.
+   -- targetPosition: the position of target node.
+   -- controlPoints: a set of control points for 'SPLINE_CURVE', or 'PATH' edge.
+
+
+```js
+  getNodePosition = node => this._nodePositionMap[node.getId()];
+
+  getEdgePosition = edge => {
+    const sourcePos = this._nodePositionMap[edge.getSourceNodeId()];
+    const targetPos = this._nodePositionMap[edge.getTargetNodeId()];
+    return {
+      type: EDGE_TYPE.LINE,
+      sourcePosition: sourcePos,
+      targetPosition: targetPos,
+      controlPoints: [],
+    };
+  };
+```
+
+
+## Full source code
+
+```js
+import {BaseLayout} from 'graph.gl';
+
+export default class RandomLayout extends BaseLayout {
+  constructor(options) {
+    super(options);
+    this._name = 'RandomLayout';
+    this._options = {
+      ...defaultOptions,
+      ...options,
+    };
+    this._nodePositionMap = {};
+  }
+
+  // first time to pass the graph data into this layout
+  initializeGraph(graph) {
+    this.updateGraph(graph);
+  }
+  // update the existing graph
+  updateGraph(grpah) {
+    this._graph = graph;
+    this._nodePositionMap = graph.getNodes().reduce((res, node) => {
+      res[node.getId()] = this._nodePositionMap[node.getId()] || [0, 0];
+      return res;
+    }, {});
+  }
+
+  start() {
+    const {viewportWidth, viewportHeight} = this._options;
+    this._nodePositionMap = Object.keys(this._nodePositionMap).reduce((res, nodeId) => {
+      res[nodeId] = [Math.random() * viewportWidth, Math.random() * viewportHeight];
+      return res;
+    }, {});
+    this._callbacks.onLayoutChange();
+    this._callbacks.onLayoutDone();
+  }
+
+  getNodePosition = node => this._nodePositionMap[node.getId()];
+
+  getEdgePosition = edge => {
+    const sourcePos = this._nodePositionMap[edge.getSourceNodeId()];
+    const targetPos = this._nodePositionMap[edge.getTargetNodeId()];
+    return {
+      type: EDGE_TYPE.LINE,
+      sourcePosition: sourcePos,
+      targetPosition: targetPos,
+      controlPoints: [],
+    };
+  };
+}
+```

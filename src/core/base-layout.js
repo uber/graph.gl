@@ -56,12 +56,29 @@ export default class BaseLayout {
 
   /** virtual functions: will be implemented in the child class */
 
+  // first time to pass the graph data into this layout
+  initializeGraph(graph) {}
+  // update the existing graph
+  updateGraph(grpah) {}
   // start the layout calculation
   start() {}
   // resume the layout calculation
   resume() {}
   // stop the layout calculation
   stop() {}
+  // access the position of the node in the layout
+  getNodePosition(node) {
+    return [0, 0];
+  }
+  // access the layout information of the edge
+  getEdgePosition(edge) {
+    return {
+      type: EDGE_TYPE.LINE,
+      sourcePosition: [0, 0],
+      targetPosition: [0, 0],
+      controlPoints: [],
+    };
+  }
 
   /**
    * Pin the node to a designated position, and the node won't move anymore
@@ -72,7 +89,7 @@ export default class BaseLayout {
   lockNodePosition(node, x, y) {}
 
   /**
-   * unlock the node, the node will be able to move freely.
+   * Unlock the node, the node will be able to move freely.
    * @param  {Object} node Node to be unlocked
    */
   unlockNodePosition(node) {}
