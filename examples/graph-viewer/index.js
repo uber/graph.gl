@@ -3,7 +3,6 @@ import NgraphGenerators from 'ngraph.generators';
 
 // graph.gl
 import GraphGL, {
-  ColaLayout,
   D3ForceLayout,
   JSONLoader,
   NODE_TYPE,
@@ -13,12 +12,10 @@ import GraphGL, {
 const DEFAULT_NODE_SIZE = 5;
 
 const FORCE_DIRECTED_LAYOUTS = {
-  Cola: 'Cola',
   D3Force: 'D3Force',
 };
 
 const FORCE_DIRECTED_LAYOUT_ENGINES = {
-  [FORCE_DIRECTED_LAYOUTS.Cola]: ColaLayout,
   [FORCE_DIRECTED_LAYOUTS.D3Force]: D3ForceLayout,
 };
 
@@ -53,7 +50,7 @@ const GRAPH_DATASETS = {
     convertNgraphDataset(NgraphGenerators.wattsStrogatz(100, 10, 0.06)),
 };
 
-const DEFAULT_LAYOUT = FORCE_DIRECTED_LAYOUTS.Cola;
+const DEFAULT_LAYOUT = FORCE_DIRECTED_LAYOUTS.D3Force;
 const DEFAULT_DATASET = 'Random (20, 40)';
 
 class Root extends Component {
