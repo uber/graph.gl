@@ -1,5 +1,4 @@
-import BaseLayout from '../../core/base-layout';
-import {EDGE_TYPE} from '../../index';
+import {BaseLayout, EDGE_TYPE} from '../../src';
 import * as d3 from 'd3-force';
 
 const defaultOptions = {

@@ -6,7 +6,8 @@ import Color from 'color';
 import {fetchJSONFromS3} from '../../utils/io';
 
 // graph.gl
-import GraphGL, {HivePlot, JSONLoader, NODE_TYPE} from '../../src';
+import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
+import HivePlot from './hive-plot-layout';
 
 const DEFAULT_NODE_SIZE = 3;
 const DEFAULT_EDGE_COLOR = 'rgba(80, 80, 80, 0.3)';

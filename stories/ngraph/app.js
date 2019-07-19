@@ -4,7 +4,8 @@ import React, {Component} from 'react';
 import SAMPLE_GRAPH_DATASETS from '../__fixtures__/sample-datasets';
 
 // graph.gl
-import GraphGL, {NGraphLayout, JSONLoader, NODE_TYPE} from '../../src';
+import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
+import NGraphLayout from './ngraph-layout';
 
 const DEFAULT_NODE_SIZE = 10;
 const DEFAULT_COLOR = 'rgb(236, 81, 72)';

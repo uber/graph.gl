@@ -5,12 +5,8 @@ import Color from 'color';
 import sampleGraph from './sample-graph.json';
 
 // graph.gl
-import GraphGL, {
-  EDGE_DECORATOR_TYPE,
-  JSONLoader,
-  MultiGraphLayout,
-  NODE_TYPE,
-} from '../../src';
+import GraphGL, {EDGE_DECORATOR_TYPE, JSONLoader, NODE_TYPE} from '../../src';
+import MultiGraphLayout from './multi-graph-layout';
 
 const DEFAULT_NODE_SIZE = 30;
 const DEFAULT_NODE_PLACEHOLDER_SIZE = 40;

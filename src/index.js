@@ -34,20 +34,6 @@ export {default as CompositeEdgeLayer} from './layers/composite-edge-layer';
 // graph.gl react components
 export {default as ViewControl} from './components/view-control';
 
-// experimental layouts
-export {default as ColaLayout} from './experimental-layouts/cola/index';
-export {default as HivePlot} from './experimental-layouts/hive-plot/index';
-export {
-  default as MultiGraphLayout,
-} from './experimental-layouts/multi-graph-layout/index';
-export {default as NGraphLayout} from './experimental-layouts/ngraph/index';
-export {
-  default as RadialLayout,
-} from './experimental-layouts/radial-layout/index';
-export {
-  default as VizJSLayout,
-} from './experimental-layouts/vizjs-layout/index';
-
 // default export
 export {default as GraphGL} from './graphgl';
 export {default} from './graphgl';

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
 // graph.gl
-import GraphGL, {JSONLoader, VizJSLayout, NODE_TYPE} from '../../src';
+import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
+import VizJSLayout from './vizjs-layout';
 
 const DEFAULT_NODE_SIZE = 15;
 

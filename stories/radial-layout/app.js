@@ -8,7 +8,8 @@ import Color from 'color';
 import {fetchJSONFromS3} from '../../utils/io';
 
 // graph.gl
-import GraphGL, {JSONLoader, NODE_TYPE, RadialLayout} from '../../src';
+import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
+import RadialLayout from './radial-layout';
 
 const DEFAULT_NODE_SIZE = 5;
 const DEFAULT_NODE_LABEL_COLOR = '#646464';

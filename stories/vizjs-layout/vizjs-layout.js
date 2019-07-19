@@ -1,9 +1,7 @@
 const Viz = require('viz.js').default;
 const {Module, render} = require('viz.js/full.render.js');
 import {extent} from 'd3-array';
-
-import BaseLayout from '../../core/base-layout';
-import {EDGE_TYPE} from '../../index';
+import {BaseLayout, EDGE_TYPE} from '../../src';
 
 const defaultOptions = {
   // engines supported by graphviz. Available engine:

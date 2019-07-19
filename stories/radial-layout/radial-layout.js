@@ -1,6 +1,4 @@
-import BaseLayout from '../../core/base-layout';
-import {EDGE_TYPE} from '../../index';
-
+import {BaseLayout, EDGE_TYPE} from '../../src';
 import NGraph from 'ngraph.graph';
 
 const defaultOptions = {
