@@ -1,6 +1,6 @@
 # Write your own custom layout
 
-
+Here's the method you will likely to implement when creating your own custom layout:
 ```js
 import {BaseLayout} from 'graph.gl';
 
@@ -13,9 +13,9 @@ export default class MyLayout extends BaseLayout {
   updateGraph(grpah) {}
   // start the layout calculation
   start() {}
-  // resume the layout calculation
+  // resume the layout calculation manually
   resume() {}
-  // stop the layout calculation
+  // stop the layout calculation manually
   stop() {}
   // access the position of the node in the layout
   getNodePosition(node) {}
@@ -28,9 +28,25 @@ export default class MyLayout extends BaseLayout {
 }
 ```
 
+We will start with a `RandomLayout` as an example, you can follow the steps one by one and find the source code at the bottom.
 
 
-Let's try to make a `RandomLayout`:
+## Life cycle
+
+[first time]
+constructor => initializeGraph => start
+
+[update graph]
+updateGraph => start
+
+---
+[callbacks]
+`this._callbacks.onLayoutChange();` => re-render => getNodePosition/getEdgePosition
+`this._callbacks.onLayoutDone();` => notify user.
+
+--
+[Dragging]
+startDragging => lockNodePosition => release => unlockNodePosition => resume
 
 ## constructor
 
@@ -38,19 +54,29 @@ In the constructor, you can initialize some internal object you'll need for the 
 The most important part is to create a 'map' to keep the position of nodes.
 
 ```js
+
 export default class RandomLayout extends BaseLayout {
+
+  static defaultOptions = {
+    viewportWidth: 1000,
+    viewportHeight: 1000
+  };
+
   constructor(options) {
+    // init BaseLayout
     super(options);
+    // give a name to this layout
     this._name = 'RandomLayout';
+    // combine the default options with user input
     this._options = {
-      ...defaultOptions,
+      ...this.defaultOptions,
       ...options,
     };
+    // a map to persis the position of nodes.
     this._nodePositionMap = {};
   }
 }
 ```
-
 
 ## Update the graph data
 GraphGL will call `initializeGraph` to pass the graph data into the layout.

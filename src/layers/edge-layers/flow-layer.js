@@ -1,6 +1,6 @@
 import {CompositeLayer} from '@deck.gl/core';
 
-import FlowPathLayer from '../../deckgl-layers/flow-path-layer';
+import FlowPathLayer from '../../deckgl-layers/flow-path-layer/index';
 
 export default class FlowLayer extends CompositeLayer {
   static layerName = 'FlowLayer';

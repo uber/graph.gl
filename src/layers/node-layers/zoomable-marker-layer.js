@@ -1,5 +1,5 @@
 import {CompositeLayer} from '@deck.gl/core';
-import MarkerLayer from '../../deckgl-layers/marker-layer';
+import MarkerLayer from '../../deckgl-layers/marker-layer/index';
 
 export default class ZoomableMarkerLayer extends CompositeLayer {
   static layerName = 'ZoomableMarkerLayer';
