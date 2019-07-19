@@ -37,13 +37,13 @@
     "-------- STORYBOOK --------": "",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o engdocs",
-    "storybook:deploy": "yarn storybook:build && NODE_DEBUG=gh-pages gh-pages -d engdocs -e storybook",
+    "storybook:deploy": "NODE_DEBUG=gh-pages gh-pages -d engdocs -e storybook",
     "-------- GATSBY WEBSITE --------": "",
     "website": "cd website && yarn && npm run start",
     "website:build": "cd website && yarn && yarn build",
-    "website:deploy": "yarn website:build && yarn deploy",
+    "website:deploy": "NODE_DEBUG=gh-pages gh-pages -d website/public -e gatsby",
     "-------- PUBLISH WEBSITES --------": "",
-    "publish-websites": "yarn storybook:deploy && yarn website:deploy"
+    "publish-websites": "yarn storybook:build && yarn storybook:deploy && yarn website:build && yarn website:deploy"
   },
   "files": [
     "dist",
