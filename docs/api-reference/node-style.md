@@ -8,7 +8,7 @@ Example of nodeStyle:
 nodeStyle={[
   {
     type: NODE_TYPE.CIRCLE,
-    radius: object => this.getNodeSize(d),
+    radius: 10,
     color: '#f00'
   },
 ]}
@@ -17,7 +17,7 @@ nodeStyle={[
 #### `type` (String, required)
 
 - `Type` can only be `CIRCLE`, `MARKER`, `RECTANGLE`, or `LABEL`.
-- Different type of layer may requires different properties. See more details in the Node style chapter below.
+- Different type of layer may requires different properties. See more details in the ['Node style'](/docs/api-reference/node-style-circle) chapter below.
 
 #### `offset` (null | Array, optional)
 - Default: `null`

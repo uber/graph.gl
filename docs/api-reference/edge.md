@@ -85,4 +85,4 @@ The value of the property.
 
 ## Source
 
-[src/core/edge.js](src/core/edge.js)
+[src/core/edge.js](https://github.com/uber-common/graph.gl/blob/master/src/core/edge.js)

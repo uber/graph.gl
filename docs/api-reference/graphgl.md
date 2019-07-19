@@ -85,7 +85,7 @@ initialViewState={{
 ## nodeStyle (Array, required)
 
 A node is made of a set of layers. nodeStyle is a set of style objects to describe the style for each layer.
-For more detail, please see the explanation of nodeStyle at [here](/docs/node-style).
+For more detail, please see the explanation of nodeStyle at [here](/docs/api-reference/node-style).
 
 ## nodeEvents (Object, required)
 All events callbacks will be triggered with the following parameters:
@@ -105,7 +105,7 @@ info: {
 
 ## edgeStyle  (Object, required)
 
-For more detail, please see the explanation of edgeStyle at [here](/docs/edge-style)
+For more detail, please see the explanation of edgeStyle at [here](/docs/api-reference/edge-style)
 
 ## edgeEvents (Object, required)
 All events callbacks will be triggered with the following parameters:
@@ -123,4 +123,4 @@ info: {
 
 
 ## Source
-[src/graphgl.js](src/graphgl.js)
+[src/graphgl.js](https://github.com/uber-common/graph.gl/blob/master/src/graphgl.js)

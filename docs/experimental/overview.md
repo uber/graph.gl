@@ -1,4 +1,4 @@
-# Experimental layouts
+# Experimental Layouts
 
 ## ngraph
 
