@@ -6,7 +6,7 @@
   color: #ededed;
 }
 .layout-card {
-  background: grey;
+  background: white;
   cursor: pointer;
   position: relative;
   width: 250px;
@@ -66,7 +66,7 @@
   <div class="layout-card">
     <div class="bg-white" data-title="Cola">
       <a href="/storybook/?path=/story/experimental-layouts--cola-js">
-        <img src="/images/layouts/cola.png">
+        <img src="/graph.gl/images/layouts/cola.png">
       </a>
     </div>
   </div>
@@ -74,7 +74,7 @@
   <div class="layout-card">
     <div class="bg-white" data-title="Hive Plot">
       <a href="/storybook/?path=/story/experimental-layouts--hive-plot">
-        <img src="/images/layouts/hive-plot.png">
+        <img src="/graph.gl/images/layouts/hive-plot.png">
       </a>
     </div>
   </div>
@@ -82,28 +82,28 @@
   <div class="layout-card">
     <div class="bg-white" data-title="MultiGraph">
       <a href="/storybook/?path=/story/experimental-layouts--multigraph">
-        <img src="/images/layouts/multi-graph.png">
+        <img src="/graph.gl/images/layouts/multi-graph.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="ngraph">
       <a href="/storybook/?path=/story/experimental-layouts--ngraph">
-        <img src="/images/layouts/ngraph.png">
+        <img src="/graph.gl/images/layouts/ngraph.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="Radial">
       <a href="/storybook/?path=/story/experimental-layouts--radial-layout">
-        <img src="/images/layouts/radial.png">
+        <img src="/graph.gl/images/layouts/radial.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="Viz.js">
       <a href="/storybook/?path=/story/experimental-layouts--viz-js">
-        <img src="/images/layouts/vizjs.png">
+        <img src="/graph.gl/images/layouts/vizjs.png">
       </a>
     </div>
   </div>
