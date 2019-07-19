@@ -1,7 +1,7 @@
 # GraphGL
 
 <p align="center">
-  <img src="/graph.gl/images/graph.png" height="200" />
+  <img src="/graph.gl/gatsby/images/graph.png" height="200" />
 </p>
 
 ## Usage

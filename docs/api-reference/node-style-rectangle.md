@@ -1,7 +1,7 @@
 # RECTANGLE
 
 <p align="center">
-  <img src="/graph.gl/images/node-styles/rectangle.png" height="100" />
+  <img src="/graph.gl/gatsby/images/node-styles/rectangle.png" height="100" />
 </p>
 
 #### `width` (Number | Function, required)

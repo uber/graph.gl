@@ -1,7 +1,5 @@
 # Edge Style
 
-TBD - pic
-
 ## Usage
 
 ```js
