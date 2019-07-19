@@ -8,7 +8,7 @@
     "develop": "gatsby develop --port=8001 --open",
     "build": "yarn clean && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
-    "deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -d public -e gatsby"
   },
   "dependencies": {
     "react": "^16.6.0",
