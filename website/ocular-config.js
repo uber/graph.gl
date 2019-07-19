@@ -33,7 +33,7 @@ module.exports = {
   PROJECT_URL: `https://github.com/uber-web/graph.gl`,
   PROJECT_DESC:
     'WebGL2-Powered Visualization Components for Graph Visualization',
-  PATH_PREFIX: `/graph.gl`,
+  PATH_PREFIX: `/graph.gl/gatsby`,
 
   FOOTER_LOGO: '',
 
@@ -66,7 +66,7 @@ module.exports = {
   ADDITIONAL_LINKS: [
     {
       index: 4,
-      href: 'https://engdocs.uberinternal.com/graph.gl/storybook/',
+      href: 'https://uber-common.github.io/graph.gl/storybook/',
       name: 'Storybook',
     },
   ],
