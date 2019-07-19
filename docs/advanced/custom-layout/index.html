@@ -40,7 +40,8 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/graph.gl/webpack-runtime-c0b9056d7e40ee2a20bd.js"/><link as="script" rel="preload" href="/graph.gl/styles-71a8fea9912b838aabf8.js"/><link as="script" rel="preload" href="/graph.gl/app-e749e2c386b65b1839ca.js"/><link as="script" rel="preload" href="/graph.gl/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js"/><link as="fetch" rel="preload" href="/graph.gl/page-data/docs/advanced/custom-layout/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div><div class="markdown-body"><h1 id="write-your-own-custom-layout"><a href="#write-your-own-custom-layout" aria-label="write your own custom layout permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Write your own custom layout</h1>
+  </script><link as="script" rel="preload" href="/graph.gl/webpack-runtime-6b7d5af5d8f22b3b5d0f.js"/><link as="script" rel="preload" href="/graph.gl/styles-71a8fea9912b838aabf8.js"/><link as="script" rel="preload" href="/graph.gl/app-b07b8a05a2e123fd23cc.js"/><link as="script" rel="preload" href="/graph.gl/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js"/><link as="fetch" rel="preload" href="/graph.gl/page-data/docs/advanced/custom-layout/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div><div class="markdown-body"><h1 id="write-your-own-custom-layout"><a href="#write-your-own-custom-layout" aria-label="write your own custom layout permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Write your own custom layout</h1>
+<p>Here's the method you will likely to implement when creating your own custom layout:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>BaseLayout<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'graph.gl'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyLayout</span> <span class="token keyword">extends</span> <span class="token class-name">BaseLayout</span> <span class="token punctuation">{</span>
@@ -52,9 +53,9 @@
   <span class="token function">updateGraph</span><span class="token punctuation">(</span><span class="token parameter">grpah</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
   <span class="token comment">// start the layout calculation</span>
   <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-  <span class="token comment">// resume the layout calculation</span>
+  <span class="token comment">// resume the layout calculation manually</span>
   <span class="token function">resume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-  <span class="token comment">// stop the layout calculation</span>
+  <span class="token comment">// stop the layout calculation manually</span>
   <span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
   <span class="token comment">// access the position of the node in the layout</span>
   <span class="token function">getNodePosition</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -65,18 +66,40 @@
   <span class="token comment">// Unlock the node, the node will be able to move freely.</span>
   <span class="token function">unlockNodePosition</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>Let's try to make a <code class="language-text">RandomLayout</code>:</p>
+<p>We will start with a <code class="language-text">RandomLayout</code> as an example, you can follow the steps one by one and find the source code at the bottom.</p>
+<h2 id="life-cycle"><a href="#life-cycle" aria-label="life cycle permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Life cycle</h2>
+<p>[first time]
+constructor => initializeGraph => start</p>
+<p>[update graph]
+updateGraph => start</p>
+<hr>
+<p>[callbacks]
+<code class="language-text">this._callbacks.onLayoutChange();</code> => re-render => getNodePosition/getEdgePosition
+<code class="language-text">this._callbacks.onLayoutDone();</code> => notify user.</p>
+<p>--
+[Dragging]
+startDragging => lockNodePosition => release => unlockNodePosition => resume</p>
 <h2 id="constructor"><a href="#constructor" aria-label="constructor permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>constructor</h2>
 <p>In the constructor, you can initialize some internal object you'll need for the layout state.
 The most important part is to create a 'map' to keep the position of nodes.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">RandomLayout</span> <span class="token keyword">extends</span> <span class="token class-name">BaseLayout</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">static</span> defaultOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    viewportWidth<span class="token punctuation">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    viewportHeight<span class="token punctuation">:</span> <span class="token number">1000</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// init BaseLayout</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// give a name to this layout</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>_name <span class="token operator">=</span> <span class="token string">'RandomLayout'</span><span class="token punctuation">;</span>
+    <span class="token comment">// combine the default options with user input</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>_options <span class="token operator">=</span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span>defaultOptions<span class="token punctuation">,</span>
+      <span class="token operator">...</span>this<span class="token punctuation">.</span>defaultOptions<span class="token punctuation">,</span>
       <span class="token operator">...</span>options<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// a map to persis the position of nodes.</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>_nodePositionMap <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
@@ -180,4 +203,4 @@ Then call <code class="language-text">this._callbacks.onLayoutDone()</code> to n
       controlPoints<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/docs/advanced/custom-layout";window.webpackCompilationHash="2bb9fd480b71aa7e3bbe";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e749e2c386b65b1839ca.js"],"component---node-modules-ocular-gatsby-src-templates-index-jsx":[],"component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx":["/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js"],"component---node-modules-ocular-gatsby-src-templates-examples-jsx":["/component---node-modules-ocular-gatsby-src-templates-examples-jsx-9923a7b7d186b39e8362.js"],"component---examples-graph-viewer-index-js":["/component---examples-graph-viewer-index-js-632746e20dce1eb86416.js"],"component---node-modules-ocular-gatsby-src-templates-search-jsx":["/component---node-modules-ocular-gatsby-src-templates-search-jsx-b492bfc215d99801b9cd.js"]};/*]]>*/</script><script src="/graph.gl/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js" async=""></script><script src="/graph.gl/app-e749e2c386b65b1839ca.js" async=""></script><script src="/graph.gl/styles-71a8fea9912b838aabf8.js" async=""></script><script src="/graph.gl/webpack-runtime-c0b9056d7e40ee2a20bd.js" async=""></script></body></html>
+<span class="token punctuation">}</span></code></pre></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/docs/advanced/custom-layout";window.webpackCompilationHash="cae4e01b26c8f755507e";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-b07b8a05a2e123fd23cc.js"],"component---node-modules-ocular-gatsby-src-templates-index-jsx":[],"component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx":["/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js"],"component---node-modules-ocular-gatsby-src-templates-examples-jsx":["/component---node-modules-ocular-gatsby-src-templates-examples-jsx-9923a7b7d186b39e8362.js"],"component---examples-graph-viewer-index-js":["/component---examples-graph-viewer-index-js-96f1aa8257a420a6029c.js"],"component---node-modules-ocular-gatsby-src-templates-search-jsx":["/component---node-modules-ocular-gatsby-src-templates-search-jsx-27bb8ec0856f94595c48.js"]};/*]]>*/</script><script src="/graph.gl/component---node-modules-ocular-gatsby-src-templates-doc-page-markdown-jsx-c52f96154160bb13ee4d.js" async=""></script><script src="/graph.gl/app-b07b8a05a2e123fd23cc.js" async=""></script><script src="/graph.gl/styles-71a8fea9912b838aabf8.js" async=""></script><script src="/graph.gl/webpack-runtime-6b7d5af5d8f22b3b5d0f.js" async=""></script></body></html>
