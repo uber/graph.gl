@@ -3,6 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 import {object, color, number, select} from '@storybook/addon-knobs';
 import StoryContainer from '../commons/story-container';
+import {fetchJSONFromS3} from '../../utils/io';
 
 const stories = storiesOf('Demo', module);
 
