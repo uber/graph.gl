@@ -12,7 +12,7 @@ import GraphGL, {
 
 // data
 import preLayoutGraph from '../__fixtures__/pre-layout-graph.json';
-import complexGraph from '../__fixtures__/complex.json';
+import {fetchJSONFromS3} from '../../utils/io';
 
 const stories = storiesOf('Basic Layouts', module);
 stories.addDecorator(StoryContainer);
@@ -45,7 +45,9 @@ stories.add(
   {readme: {sidebar: SimpleDoc}}
 );
 
-stories.add(
+fetchJSONFromS3(['complex.json']).then(
+  ([complexGraph]) => {
+    stories.add(
   'D3',
   () => {
     const graph = JSONLoader({
@@ -80,3 +82,7 @@ stories.add(
   },
   {readme: {sidebar: D3Doc}}
 );
+
+
+  }
+)

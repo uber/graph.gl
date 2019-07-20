@@ -1,5 +1,4 @@
 import {BaseLayout, EDGE_TYPE} from '../../src';
-import NGraph from 'ngraph.graph';
 
 const defaultOptions = {
   radius: 500,
@@ -65,17 +64,21 @@ export default class RadialLayout extends BaseLayout {
       ...options,
     };
     // custom layout data structure
-    this._ngraph = NGraph();
-    this._nodePositionMap = [];
-    this._hierarchy = {};
+    this._graph = null;
+    this._hierarchicalPoints = {};
   }
 
   initializeGraph(graph) {
     this.updateGraph(graph);
   }
 
+  updateGraph(graph) {
+    this._graph = graph;
+  }
+
   start() {
-    if (this._ngraph.getNodesCount() === 0) {
+    const nodeCount = this._graph.getNodes().length();
+    if (nodeCount === 0) {
       return;
     }
 
@@ -86,7 +89,7 @@ export default class RadialLayout extends BaseLayout {
     }
 
     const {radius} = this._options;
-    const unitAngle = 360 / this._ngraph.getNodesCount();
+    const unitAngle = 360 / nodeCount;
 
     // hierarchical positions
     const rootNode = tree[0];
@@ -141,48 +144,6 @@ export default class RadialLayout extends BaseLayout {
     // layout completes: notifiy component to re-render
     this._callbacks.onLayoutChange();
     this._callbacks.onLayoutDone();
-  }
-
-  updateGraph(graph) {
-    // remove non-exist node
-    this._ngraph.forEachNode(nNode => {
-      const node = graph.findNode(nNode.getId());
-      if (!node) {
-        this._ngraph.removeNode(nNode.getId());
-      }
-    });
-    // add new nodes
-    graph.getNodes().forEach(node => {
-      const nNode = this._ngraph.getNode(node.getId());
-      if (!nNode) {
-        // add new node
-        this._ngraph.addNode(node.getId(), node);
-        // assign initial position
-        this._nodePositionMap[node.getId()] = [0, 0];
-      }
-    });
-
-    // remove non-exist edge
-    this._ngraph.forEachLink(nEdge => {
-      const edgeId = nEdge.data;
-      if (!graph.findEdge(edgeId)) {
-        this._ngraph.removeLink(nEdge);
-      }
-    });
-    graph.getEdges().forEach(edge => {
-      const nEdge = this._ngraph.getLink(
-        edge.getSourceNodeId(),
-        edge.getTargetNodeId()
-      );
-      if (!nEdge) {
-        // add new edge
-        this._ngraph.addLink(
-          edge.getSourceNodeId(),
-          edge.getTargetNodeId(),
-          edge
-        );
-      }
-    });
   }
 
   getNodePosition = node => {
