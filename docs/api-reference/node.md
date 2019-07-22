@@ -1,6 +1,6 @@
 # Node Class
 
-The `Node` class is the base class of the node, which provides a list of basic util functions to be used through the applications.
+The `Node` class is the base class of the node, which provides a list of basic util functions to be used through out the applications.
 
 
 ## Constructor

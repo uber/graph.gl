@@ -77,7 +77,7 @@ export default class RadialLayout extends BaseLayout {
   }
 
   start() {
-    const nodeCount = this._graph.getNodes().length();
+    const nodeCount = this._graph.getNodes().length;
     if (nodeCount === 0) {
       return;
     }

@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/BF9aOEu.png" height="300" />
+  <img src="https://i.imgur.com/BF9aOEu.png" height="400" />
 </p>
 
 # Graph.gl

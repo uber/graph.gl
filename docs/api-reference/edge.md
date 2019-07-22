@@ -1,6 +1,6 @@
 # Edge Class
 
-The `Edge` class is the base class of the edge.
+The `Edge` class is the base class of the edge, which provides a list of basic util functions to be used through out the applications.
 
 
 ## Constructor
