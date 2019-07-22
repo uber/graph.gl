@@ -1,6 +1,6 @@
 <p align="right">
   <a href="https://travis-ci.com/uber/graph.gl">
-    <img src="https://travis-ci.com/uber-common/graph.gl.svg?token=gPtGo5hNzC9rS7DfHafq&branch=master" alt="build" />
+    <img src="https://travis-ci.com/uber/graph.gl.svg?token=gPtGo5hNzC9rS7DfHafq&branch=master" alt="build" />
   </a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl?ref=badge_shield" alt="FOSSA Status">
     <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjavidhsueh%2Fgraph.gl.svg?type=shield"/>
@@ -94,7 +94,7 @@ const App = ({data}) => {
 #### Clone the repo:
 
 ```
-git clone git@github.com:uber-common/graph.gl.git
+git clone git@github.com:uber/graph.gl.git
 ```
 
 #### Install yarn

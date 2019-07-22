@@ -123,4 +123,4 @@ info: {
 
 
 ## Source
-[src/graphgl.js](https://github.com/uber-common/graph.gl/blob/master/src/graphgl.js)
+[src/graphgl.js](https://github.com/uber/graph.gl/blob/master/src/graphgl.js)

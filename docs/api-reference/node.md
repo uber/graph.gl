@@ -100,4 +100,4 @@ Clear `this._connectedEdges`
 
 ## Source
 
-[src/core/node.js](https://github.com/uber-common/graph.gl/blob/master/src/core/node.js)
+[src/core/node.js](https://github.com/uber/graph.gl/blob/master/src/core/node.js)
