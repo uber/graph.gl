@@ -70,57 +70,23 @@ const graph = JSONLoader({json: data});
 ## layout (Layout, required)
 Use one of the layouts provided by Graph.gl or create a new custom layout class by following the [instruction](/docs/advanced/custom-layout). Right now Graph.gl provides D3 and Simple layout for basic usage. There are more experimental layouts under `src/experimental-layouts`, please reference to the experimental layout [gallery](docs/experimental).
 
-## initialViewState (optional)
-
-```js
-initialViewState={{
-  target: [0, 0],
-  zoom: 1,
-}}
-```
- - target ([x: Number, y: Number], optional):  The target origin to the center of the view.
- - zoom (Number, optional): The zoom level of the view.
-
+## initialViewState (Object, optional)
+For more detail, please see [here](/docs/api-reference/viewport).
 
 ## nodeStyle (Array, required)
 
 A node is made of a set of layers. nodeStyle is a set of style objects to describe the style for each layer.
-For more detail, please see the explanation of nodeStyle at [here](/docs/api-reference/node-style).
+For more detail, please see the explanation of nodeStyle at [here](docs/api-reference/node-style).
 
-## nodeEvents (Object, required)
-All events callbacks will be triggered with the following parameters:
-```js
-info: {
-  object:  The object that was picked.
-  x: Mouse position x relative to the viewport.
-  y: Mouse position y relative to the viewport.
-  coordinate:  Mouse position in viewport coordinate system.
-}
-```
-
- - onClick: This callback will be called when the mouse clicks on an node. Default: `null`.
- - onMouseEnter: This callback will be called when the mouse enter an node. Default: `null`.
- - onHover: This callback will be called when the mouse hovers over an node. Default: `null`.
- - onMouseLeave: This callback will be called when the mouse leaves an node. Default: `null`.
+## nodeEvents (Object, optional)
+For more detail, please see [here](/docs/api-reference/interactions).
 
 ## edgeStyle  (Object, required)
 
-For more detail, please see the explanation of edgeStyle at [here](/docs/api-reference/edge-style)
+For more detail, please see the explanation of edgeStyle at [here](docs/api-reference/edge-style)
 
-## edgeEvents (Object, required)
-All events callbacks will be triggered with the following parameters:
-```js
-info: {
-  object:  The object that was picked.
-  x: Mouse position x relative to the viewport.
-  y: Mouse position y relative to the viewport.
-  coordinate:  Mouse position in viewport coordinate system.
-}
-```
-
- - onClick: This callback will be called when the mouse clicks on an edge. Default: `null`.
- - onHover: This callback will be called when the mouse hovers over an edge. Default: `null`.
-
+## edgeEvents (Object, optional)
+For more detail, please see [here](docs/api-reference/interactions).
 
 ## Source
 [src/graphgl.js](https://github.com/uber/graph.gl/blob/master/src/graphgl.js)

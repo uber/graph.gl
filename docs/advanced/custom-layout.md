@@ -31,21 +31,32 @@ export default class MyLayout extends BaseLayout {
 We will start with a `RandomLayout` as an example, you can follow the steps one by one and find the source code at the bottom.
 
 
-## Life cycle
+## Lifecycles
 
-[first time]
-constructor => initializeGraph => start
+For a graph layout, everything goes through a set of events. In each event, the layout will need to take the inputs and do the different computations.  Lifecycle methods are various methods which are invoked at different phases of the lifecycle of a graph layout. If you are aware of these lifecycle events, it will enable you to control their entire flow and it will definitely help us to produce better results.
 
-[update graph]
-updateGraph => start
+A layout goes through the following phases:
 
----
-[callbacks]
-`this._callbacks.onLayoutChange();` => re-render => getNodePosition/getEdgePosition
-`this._callbacks.onLayoutDone();` => notify user.
+- Mounting:
+  constructor => initializeGraph => start
+- Updating:
+  updageGraph => start
+- Unmounting:
 
---
-[Dragging]
+
+There are a few callbacks should be triggered when the layout changes:
+ - `this._callbacks.onLayoutChange()`
+  Every time when the layout changes, `onLayoutChange` callback should be triggered to notify GraphGL to re-render and update the view. Then GraphGL will use `getNodePosition` and `getEdgePosition` to get the position information to render the graph. Some users might also want to leverage this event hook to perform different interactions, ex: show a spinner on the UI to indicate the layout is computing.
+
+ - `this._callbacks.onLayoutDone()`
+  When the layout is completed, 'onLayoutDone' should be triggered to notify GraphGL/User. Some users might also want to leverage this event hook to perform different interactions, ex: remove the spinner from the UI.
+
+If you want to implement the drag & drag interaction on nodes, you will have to implement:
+ - lockNodePosition: pin the node at the designated position.
+ - unlockNodePosition: free the node from the position.
+ - resume: resume the layout calculation.
+
+The sequence of the events is like:
 startDragging => lockNodePosition => release => unlockNodePosition => resume
 
 ## constructor

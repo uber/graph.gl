@@ -1,5 +1,9 @@
 # Interactions
 
+In this chapter, you'll learn about how to interact with the graph.
+
+There are the porperties you can specify when using the GraphGL component:
+
 ## nodeEvents (Object, required)
 All events callbacks will be triggered with the following parameters:
 ```js
