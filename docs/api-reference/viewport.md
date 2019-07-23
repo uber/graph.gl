@@ -1,6 +1,6 @@
 # Viewport
 
-## initialViewState (optional)
+### initialViewState (Object, optional)
 
 ```js
 initialViewState={{
@@ -11,11 +11,11 @@ initialViewState={{
  - target ([x: Number, y: Number], optional):  The target origin to the center of the view.
  - zoom (Number, optional): The zoom level of the view.
 
-## minZoom: PropTypes.number
+### `minZoom` (Number, optional)
 A minimum scale factor for zoom level of the graph.
 
-## maxZoom: PropTypes.number,
+### `maxZoom` (Number, optional)
 A maximum scale factor for zoom level of the graph.
 
-## viewportPadding: PropTypes.number,
+### `viewportPadding` (Number, optional)
 Padding for fitting entire graph in the screen. (pixel)

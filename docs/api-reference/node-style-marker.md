@@ -4,7 +4,7 @@
   <img src="/graph.gl/gatsby/images/node-styles/marker.png" height="100" />
 </p>
 
-#### `marker` (String | Function, required)
+### `marker` (String | Function, required)
 - Marker can be one of the following types:
 ```js
 "location-marker-filled", "bell-filled", "bookmark-filled", "bookmark", "cd-filled", "cd", "checkmark",
@@ -20,12 +20,12 @@
 - If a string is provided for `marker`, all the objects will use the same marker.
 - If an accessor function is provided, the function will be called to retrieve the marker of each marker.
 
-#### `size` (Number | Function, optional)
+### `size` (Number | Function, optional)
 - Default: `12`
 - If a number is provided for `size`, all the markers will have the same size.
 - If an accessor function is provided, the function will be called to retrieve the size of each marker.
 
-#### `fill` (String | Array | Function, optional)
+### `fill` (String | Array | Function, optional)
 - Default: `[0, 0, 0, 255]`
 - The value can be hex code, color name, or color array `[r, g, b, a]` (each component is in the 0 - 255 range).
 If a color value (hex code, color name, or array) is provided, it is used as the global color for all objects.

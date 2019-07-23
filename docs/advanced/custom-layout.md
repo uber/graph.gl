@@ -31,17 +31,16 @@ export default class MyLayout extends BaseLayout {
 We will start with a `RandomLayout` as an example, you can follow the steps one by one and find the source code at the bottom.
 
 
-## Lifecycles
+### Lifecycles
 
 For a graph layout, everything goes through a set of events. In each event, the layout will need to take the inputs and do the different computations.  Lifecycle methods are various methods which are invoked at different phases of the lifecycle of a graph layout. If you are aware of these lifecycle events, it will enable you to control their entire flow and it will definitely help us to produce better results.
 
 A layout goes through the following phases:
 
 - Mounting:
-  constructor => initializeGraph => start
+  `constructor` => `initializeGraph` => `start`
 - Updating:
-  updageGraph => start
-- Unmounting:
+  `updageGraph` => `start`
 
 
 There are a few callbacks should be triggered when the layout changes:
@@ -52,14 +51,14 @@ There are a few callbacks should be triggered when the layout changes:
   When the layout is completed, 'onLayoutDone' should be triggered to notify GraphGL/User. Some users might also want to leverage this event hook to perform different interactions, ex: remove the spinner from the UI.
 
 If you want to implement the drag & drag interaction on nodes, you will have to implement:
- - lockNodePosition: pin the node at the designated position.
- - unlockNodePosition: free the node from the position.
- - resume: resume the layout calculation.
+ - `lockNodePosition`: pin the node at the designated position.
+ - `unlockNodePosition`: free the node from the position.
+ - `resume`: resume the layout calculation.
 
 The sequence of the events is like:
 startDragging => lockNodePosition => release => unlockNodePosition => resume
 
-## constructor
+### constructor
 
 In the constructor, you can initialize some internal object you'll need for the layout state.
 The most important part is to create a 'map' to keep the position of nodes.
@@ -89,7 +88,7 @@ export default class RandomLayout extends BaseLayout {
 }
 ```
 
-## Update the graph data
+### Update the graph data
 GraphGL will call `initializeGraph` to pass the graph data into the layout.
 If the graph is the same one but part ofthe data is changed, GraphGL will call `updateGraph` method to notify the layout.
 
@@ -110,7 +109,7 @@ In this case, we can just simply update the `this._nodePositionMap` by going thr
 ```
 
 
-## Compute layout
+### Compute layout
 
 GraphGL will call `start()` of the layout to kick start the layout calculation.
 In this case, the computation is easy as assigning random position for each node only.
@@ -129,7 +128,7 @@ Then call `this._callbacks.onLayoutDone()` to notify the render that layout is c
   }
 ```
 
-## Getters
+### Getters
 
 GraphGL will keep retrieving the position of nodes and edges from the layout. You will need to provide two getters `getNodePosition` and `getEdgePosition`.
 
@@ -157,7 +156,7 @@ GraphGL will keep retrieving the position of nodes and edges from the layout. Yo
 ```
 
 
-## Full source code
+### Full source code
 
 ```js
 import {BaseLayout} from 'graph.gl';
