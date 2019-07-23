@@ -6,6 +6,9 @@
       "entries": [
         {
           "entry": "docs/README"
+        },
+        {
+          "entry": "docs/version-policy"
         }
       ]
     },
