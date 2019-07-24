@@ -33,7 +33,7 @@ module.exports = {
   PROJECT_URL: `https://github.com/uber-web/graph.gl`,
   PROJECT_DESC:
     'WebGL2-Powered Visualization Components for Graph Visualization',
-  PATH_PREFIX: `/graph.gl/gatsby`,
+  PATH_PREFIX: `/gatsby`,
 
   FOOTER_LOGO: '',
 
