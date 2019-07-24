@@ -65,45 +65,45 @@
 <div style="display: flex; flex-wrap: wrap;">
   <div class="layout-card">
     <div class="bg-white" data-title="Cola">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--cola-js">
-        <img src="/graph.gl/gatsby/images/layouts/cola.png">
+      <a href="/storybook/?path=/story/experimental-layouts--cola-js">
+        <img src="/gatsby/images/layouts/cola.png">
       </a>
     </div>
   </div>
 
   <div class="layout-card">
     <div class="bg-white" data-title="Hive Plot">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--hive-plot">
-        <img src="/graph.gl/gatsby/images/layouts/hive-plot.png">
+      <a href="/storybook/?path=/story/experimental-layouts--hive-plot">
+        <img src="/gatsby/images/layouts/hive-plot.png">
       </a>
     </div>
   </div>
 
   <div class="layout-card">
     <div class="bg-white" data-title="MultiGraph">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--multigraph">
-        <img src="/graph.gl/gatsby/images/layouts/multi-graph.png">
+      <a href="/storybook/?path=/story/experimental-layouts--multigraph">
+        <img src="/gatsby/images/layouts/multi-graph.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="ngraph">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--ngraph">
-        <img src="/graph.gl/gatsby/images/layouts/ngraph.png">
+      <a href="/storybook/?path=/story/experimental-layouts--ngraph">
+        <img src="/gatsby/images/layouts/ngraph.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="Radial">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--radial-layout">
-        <img src="/graph.gl/gatsby/images/layouts/radial.png">
+      <a href="/storybook/?path=/story/experimental-layouts--radial-layout">
+        <img src="/gatsby/images/layouts/radial.png">
       </a>
     </div>
   </div>
   <div class="layout-card">
     <div class="bg-white" data-title="Viz.js">
-      <a href="/graph.gl/storybook/?path=/story/experimental-layouts--viz-js">
-        <img src="/graph.gl/gatsby/images/layouts/vizjs.png">
+      <a href="/storybook/?path=/story/experimental-layouts--viz-js">
+        <img src="/gatsby/images/layouts/vizjs.png">
       </a>
     </div>
   </div>

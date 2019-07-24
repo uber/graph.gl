@@ -1,7 +1,7 @@
 # FLOW
 
 <p align="center">
-  <img src="/graph.gl/gatsby/images/edge-styles/flows.gif" height="200" />
+  <img src="/gatsby/images/edge-styles/flows.gif" height="200" />
 </p>
 
 ### `color` (String | Array | Function, optional)

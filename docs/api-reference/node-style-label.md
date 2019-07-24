@@ -1,7 +1,7 @@
 # LABEL
 
 <p align="center">
-  <img src="/graph.gl/gatsby/images/node-styles/label.png" height="100" />
+  <img src="/gatsby/images/node-styles/label.png" height="100" />
 </p>
 
 ### `text` (String | Function, required)
