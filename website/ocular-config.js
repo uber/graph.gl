@@ -66,7 +66,7 @@ module.exports = {
   ADDITIONAL_LINKS: [
     {
       index: 4,
-      href: 'https://uber.github.io/graph.gl/storybook/',
+      href: 'http://graph.gl/storybook/',
       name: 'Storybook',
     },
   ],
