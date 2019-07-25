@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 // data
-import SAMPLE_GRAPH_DATASETS from '../__fixtures__/sample-datasets';
+import SAMPLE_GRAPH_DATASETS from '../commons/sample-datasets';
 
 // graph.gl
 import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';

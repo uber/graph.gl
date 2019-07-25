@@ -6,7 +6,7 @@ import StoryContainer from '../commons/story-container';
 // graph.gl
 import GraphGL, {D3ForceLayout, JSONLoader, NODE_TYPE} from '../../src';
 // data
-import SAMPLE_GRAPH_DATASETS from '../__fixtures__/sample-datasets';
+import SAMPLE_GRAPH_DATASETS from '../commons/sample-datasets';
 const graph = JSONLoader({json: SAMPLE_GRAPH_DATASETS['Random (20, 40)']()});
 
 // create category

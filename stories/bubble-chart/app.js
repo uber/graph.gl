@@ -111,8 +111,6 @@ class BubbleChartExample extends React.Component {
               }
               return this._nodeSizeScale(d.getPropertyValue('value'));
             },
-            // TODO: this is an issue that function needs to return an array instead of color string/
-            // will fix it later.
             fill: d => {
               return d.getPropertyValue('visible')
                 ? 'red'
@@ -123,7 +121,7 @@ class BubbleChartExample extends React.Component {
           },
           {
             type: NODE_TYPE.LABEL,
-            text: node => node.getPropertyValue('name'),
+            text: node => node.getId(),
             color: d => (d.getPropertyValue('visible') ? 'red' : 'transparent'),
             fontSize: 3,
             offset: [0, 1],

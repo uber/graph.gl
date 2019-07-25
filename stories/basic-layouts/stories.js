@@ -11,7 +11,6 @@ import GraphGL, {
 } from '../../src';
 
 // data
-import preLayoutGraph from '../__fixtures__/pre-layout-graph.json';
 import {fetchJSONFromS3} from '../../utils/io';
 
 const stories = storiesOf('Basic Layouts', module);
@@ -21,28 +20,32 @@ stories.addDecorator(StoryContainer);
 import SimpleDoc from './simple.md';
 import D3Doc from './d3.md';
 
-stories.add(
-  'Simple',
-  () => (
-    <GraphGL
-      graph={JSONLoader({json: preLayoutGraph})}
-      layout={new SimpleLayout()}
-      nodeStyle={[
-        {
-          type: NODE_TYPE.CIRCLE,
-          radius: 10,
-          fill: 'blue',
-          opacity: 1,
-        },
-      ]}
-      edgeStyle={{
-        stroke: 'black',
-        strokeWidth: 2,
-      }}
-      enableDragging
-    />
-  ),
-  {readme: {sidebar: SimpleDoc}}
+fetchJSONFromS3(['pre-layout-graph.json']).then(
+  ([preLayoutGraph]) => {
+    stories.add(
+      'Simple',
+      () => (
+        <GraphGL
+          graph={JSONLoader({json: preLayoutGraph})}
+          layout={new SimpleLayout()}
+          nodeStyle={[
+            {
+              type: NODE_TYPE.CIRCLE,
+              radius: 10,
+              fill: 'blue',
+              opacity: 1,
+            },
+          ]}
+          edgeStyle={{
+            stroke: 'black',
+            strokeWidth: 2,
+          }}
+          enableDragging
+        />
+      ),
+      {readme: {sidebar: SimpleDoc}}
+    );
+  }
 );
 
 fetchJSONFromS3(['complex.json']).then(

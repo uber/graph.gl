@@ -21,7 +21,7 @@ const data = {
 const graph = JSONLoader({json: data});
 
 // create category
-const stories = storiesOf('Node types', module);
+const stories = storiesOf('Node Types', module);
 stories.addDecorator(StoryContainer);
 
 // constants

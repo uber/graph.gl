@@ -4,7 +4,7 @@ import {select} from '@storybook/addon-knobs';
 import StoryContainer from '../commons/story-container';
 
 // data
-import SAMPLE_GRAPH_DATASETS from '../__fixtures__/sample-datasets';
+import SAMPLE_GRAPH_DATASETS from '../commons/sample-datasets';
 
 const stories = storiesOf('Experimental Layouts', module);
 stories.addDecorator(StoryContainer);

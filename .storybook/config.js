@@ -1,4 +1,4 @@
-import {configure, addDecorator, addParameters} from '@storybook/react';
+import {configure, addDecorator, addParameters, storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {withKnobs} from '@storybook/addon-knobs';
 import {addReadme} from 'storybook-readme';
@@ -23,6 +23,7 @@ addParameters({
     showSearchBox: false,
     showPanel: true,
     selectedAddonPanel: 'README',
+    sortStoriesByKind: true,
   },
 });
 
