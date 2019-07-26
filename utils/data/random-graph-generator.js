@@ -21,7 +21,7 @@ const randomChoose = (s, k) => {
   return selected;
 };
 
-export default function randomGraphGenerator(n, m) {
+export default function randomGraphGenerator(n, m, name = 'default') {
   // generate an array of nodes with id form 0 to n;
   const nodes = Array.from(Array(n).keys()).map(id => ({id}));
   const links = randomChoose(genAllPairs(nodes), m);
@@ -30,5 +30,5 @@ export default function randomGraphGenerator(n, m) {
     sourceId: link[0].id,
     targetId: link[1].id,
   }));
-  return {nodes, edges};
+  return {name, nodes, edges};
 }

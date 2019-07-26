@@ -1,6 +1,5 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import StoryContainer from '../commons/story-container';
 
 // graph.gl
 import GraphGL, {
@@ -11,18 +10,13 @@ import GraphGL, {
 } from '../../src';
 // data
 const data = {
-  nodes: [
-    {id: 1}, {id: 2}
-  ],
-  edges: [
-    {id: 1, sourceId: 1, targetId: 2}
-  ],
-}
+  nodes: [{id: 1}, {id: 2}],
+  edges: [{id: 1, sourceId: 1, targetId: 2}],
+};
 const graph = JSONLoader({json: data});
 
 // create category
 const stories = storiesOf('Node Types', module);
-stories.addDecorator(StoryContainer);
 
 // constants
 const DEFAULT_COLOR = 'rgb(236, 81, 72)';
@@ -34,7 +28,7 @@ const shareProps = {
     stroke: '#000',
     strokeWidth: 1,
   },
-  enableDragging: true
+  enableDragging: true,
 };
 
 stories.add('Circle', () => (

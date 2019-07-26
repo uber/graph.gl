@@ -5,12 +5,12 @@ class GraphBuilder extends React.Component {
   state = {graph: null};
 
   componentDidMount() {
-    this.processData(this.props.data);
+    this.processData(this.props.graph);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.data !== nextProps.data) {
-      this.processData(nextProps.data);
+    if (this.props.graph !== nextProps.graph) {
+      this.processData(nextProps.graph);
     }
   }
 
@@ -26,13 +26,6 @@ class GraphBuilder extends React.Component {
       }),
     });
     this.setState({graph});
-  };
-
-  _getNodeSize = n => {
-    if (this.props.nodeSizeMapping === 'Constant') {
-      return this.props.nodeSize;
-    }
-    return n.getPropertyValue(this.props.nodeSizeMapping);
   };
 
   render() {
@@ -54,7 +47,7 @@ class GraphBuilder extends React.Component {
             marker: 'circle-filled',
 
             ':hover': {
-              fill: 'orange',
+              fill: 'red',
             },
           },
           {
@@ -66,8 +59,8 @@ class GraphBuilder extends React.Component {
             scaleWithZoom: true,
 
             ':hover': {
-              text: 'hover',
-              color: 'white',
+              color: 'red',
+              fontSize: 18,
             },
           },
         ]}
@@ -77,12 +70,7 @@ class GraphBuilder extends React.Component {
         }}
         edgeStyle={{
           stroke: this.props.edgeColor,
-          strokeWidth: e => {
-            if (this.props.edgeWidthMapping === 'Constant') {
-              return this.props.edgeWidth;
-            }
-            return e.getPropertyValue(this.props.edgeWidthMapping);
-          },
+          strokeWidth: this.props.edgeWidth,
         }}
       />
     );

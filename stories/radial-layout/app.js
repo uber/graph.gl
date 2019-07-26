@@ -5,7 +5,7 @@ import {extent} from 'd3-array';
 import Color from 'color';
 
 // data
-import {fetchJSONFromS3} from '../../utils/io';
+import {fetchJSONFromS3} from '../../utils/data/io';
 
 // graph.gl
 import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
@@ -84,7 +84,7 @@ export default class BasicRadialExample extends Component {
         ]}
         edgeStyle={{
           stroke: DEFAULT_EDGE_COLOR,
-          strokeWidth: 2,
+          strokeWidth: 1,
         }}
       />
     );

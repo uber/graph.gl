@@ -23,7 +23,6 @@ export {basicNodeParser} from './loaders/node-parsers';
 export {basicEdgeParser} from './loaders/edge-parsers';
 
 // graph.gl utils
-export {default as randomGraphGenerator} from './utils/random-graph-generator';
 export {default as createGraph} from './utils/create-graph';
 export * from './utils/layer-utils';
 

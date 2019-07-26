@@ -1,6 +1,5 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import StoryContainer from '../commons/story-container';
 
 // graph.gl
 import GraphGL, {
@@ -10,62 +9,51 @@ import GraphGL, {
   SimpleLayout,
 } from '../../src';
 
-// data
-import {fetchJSONFromS3} from '../../utils/io';
+import FetchS3GraphHOC from '../../utils/hocs/fetch-s3-graph-hoc';
+import SampleDatasetSelectorHOC from '../../utils/hocs/sample-dataset-selector-hoc';
 
 const stories = storiesOf('Basic Layouts', module);
-stories.addDecorator(StoryContainer);
 
 // start to add examples
 import SimpleDoc from './simple.md';
 import D3Doc from './d3.md';
 
-fetchJSONFromS3(['pre-layout-graph.json']).then(
-  ([preLayoutGraph]) => {
-    stories.add(
-      'Simple',
-      () => (
-        <GraphGL
-          graph={JSONLoader({json: preLayoutGraph})}
-          layout={new SimpleLayout()}
-          nodeStyle={[
-            {
-              type: NODE_TYPE.CIRCLE,
-              radius: 10,
-              fill: 'blue',
-              opacity: 1,
-            },
-          ]}
-          edgeStyle={{
-            stroke: 'black',
-            strokeWidth: 2,
-          }}
-          enableDragging
-        />
-      ),
-      {readme: {sidebar: SimpleDoc}}
+stories.add(
+  'Simple',
+  () => {
+    const graphLoader = data => JSONLoader({json: data});
+    const WithDataGraphGL = FetchS3GraphHOC(
+      'pre-layout-graph.json',
+      graphLoader
+    )(GraphGL);
+    return (
+      <WithDataGraphGL
+        layout={new SimpleLayout()}
+        nodeStyle={[
+          {
+            type: NODE_TYPE.CIRCLE,
+            radius: 10,
+            fill: 'blue',
+            opacity: 1,
+          },
+        ]}
+        edgeStyle={{
+          stroke: 'black',
+          strokeWidth: 2,
+        }}
+        enableDragging
+      />
     );
-  }
+  },
+  {readme: {sidebar: SimpleDoc}}
 );
 
-fetchJSONFromS3(['complex.json']).then(
-  ([complexGraph]) => {
-    stories.add(
+stories.add(
   'D3',
   () => {
-    const graph = JSONLoader({
-      json: complexGraph,
-      nodeParser: node => ({id: node.id}),
-      edgeParser: edge => ({
-        id: Math.random() * 10000,
-        sourceId: edge.sourceId,
-        targetId: edge.targetId,
-        directed: true,
-      }),
-    });
+    const WithDatasetGraphGL = SampleDatasetSelectorHOC(GraphGL);
     return (
-      <GraphGL
-        graph={graph}
+      <WithDatasetGraphGL
         layout={new D3ForceLayout()}
         nodeStyle={[
           {
@@ -85,7 +73,3 @@ fetchJSONFromS3(['complex.json']).then(
   },
   {readme: {sidebar: D3Doc}}
 );
-
-
-  }
-)

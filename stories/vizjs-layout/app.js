@@ -10,12 +10,12 @@ export default class VizJSExample extends Component {
   state = {graph: null};
 
   componentDidMount() {
-    this.processData(this.props.data);
+    this.processData(this.props.graph);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.data !== nextProps.data) {
-      this.processData(nextProps.data);
+    if (this.props.graph !== nextProps.graph) {
+      this.processData(nextProps.graph);
     }
   }
 

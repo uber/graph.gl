@@ -3,7 +3,7 @@ import {scaleOrdinal} from 'd3-scale';
 import {schemeAccent} from 'd3-scale-chromatic';
 import {extent} from 'd3-array';
 import Color from 'color';
-import {fetchJSONFromS3} from '../../utils/io';
+import {fetchJSONFromS3} from '../../utils/data/io';
 
 // graph.gl
 import GraphGL, {JSONLoader, NODE_TYPE} from '../../src';
@@ -11,7 +11,7 @@ import HivePlot from './hive-plot-layout';
 
 const DEFAULT_NODE_SIZE = 3;
 const DEFAULT_EDGE_COLOR = 'rgba(80, 80, 80, 0.3)';
-const DEFAULT_EDGE_WIDTH = 2;
+const DEFAULT_EDGE_WIDTH = 1;
 const DEFAULT_WIDTH = 1000;
 
 export default class HivePlotExample extends Component {

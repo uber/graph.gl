@@ -1,7 +1,7 @@
 import NgraphGenerators from 'ngraph.generators';
 
 import lesGraph from './les-miserable.json';
-import {randomGraphGenerator} from '../../src';
+import randomGraphGenerator from './random-graph-generator';
 
 const convertNgraphDataset = ngraph => {
   const nodes = [];
@@ -21,10 +21,13 @@ const convertNgraphDataset = ngraph => {
 
 const SAMPLE_GRAPH_DATASETS = {
   'Les Miserable': () => lesGraph,
-  'Random (20, 40)': () => randomGraphGenerator(20, 40),
-  'Random (100, 200)': () => randomGraphGenerator(100, 200),
-  'Random (1000, 2000)': () => randomGraphGenerator(1000, 2000),
-  'Random (5000, 3000)': () => randomGraphGenerator(5000, 3000),
+  'Random (20, 40)': () => randomGraphGenerator(20, 40, 'Random (20, 40)'),
+  'Random (100, 200)': () =>
+    randomGraphGenerator(100, 200, 'Random (100, 200)'),
+  'Random (1000, 2000)': () =>
+    randomGraphGenerator(1000, 2000, 'Random (1000, 2000)'),
+  'Random (5000, 3000)': () =>
+    randomGraphGenerator(5000, 3000, 'Random (5000, 3000)'),
   'Ladder (10)': () => convertNgraphDataset(NgraphGenerators.ladder(10)),
   'BalancedBinTree (5)': () =>
     convertNgraphDataset(NgraphGenerators.balancedBinTree(5)),

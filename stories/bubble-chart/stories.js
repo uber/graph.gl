@@ -1,10 +1,8 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import StoryContainer from '../commons/story-container';
 import {number} from '@storybook/addon-knobs';
 
 const stories = storiesOf('Demo', module);
-stories.addDecorator(StoryContainer);
 
 // start to add examples
 import BasicDoc from './README.md';

@@ -8,7 +8,7 @@ const JSONLoader = ({
   nodeParser = basicNodeParser,
   edgeParser = basicEdgeParser,
 }) => {
-  const {name, nodes, edges} = json;
+  const {name = 'default', nodes, edges} = json;
   if (!nodes) {
     log.error('Invalid graph: nodes is missing.')();
     return null;

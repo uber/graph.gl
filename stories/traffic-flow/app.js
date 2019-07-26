@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import {window} from 'global';
 
 import GraphGL, {JSONLoader, NODE_TYPE, EDGE_DECORATOR_TYPE} from '../../src';
-import {fetchJSONFromS3} from '../../utils/io';
-
+import {fetchJSONFromS3} from '../../utils/data/io';
 import FlowForceLayout from './flow-force-layout';
-
 import Clock from './clock';
 
 const AppWrapper = styled.div`

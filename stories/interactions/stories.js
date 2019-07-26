@@ -1,17 +1,15 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
-import StoryContainer from '../commons/story-container';
 
 // graph.gl
 import GraphGL, {D3ForceLayout, JSONLoader, NODE_TYPE} from '../../src';
 // data
-import SAMPLE_GRAPH_DATASETS from '../commons/sample-datasets';
+import SAMPLE_GRAPH_DATASETS from '../../utils/data/sample-datasets';
 const graph = JSONLoader({json: SAMPLE_GRAPH_DATASETS['Random (20, 40)']()});
 
 // create category
 const stories = storiesOf('Interactions', module);
-stories.addDecorator(StoryContainer);
 
 const Hint = ({children}) => (
   <h3 style={{position: 'absolute', top: '10px', left: '120px'}}>{children}</h3>
