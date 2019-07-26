@@ -13,6 +13,20 @@ const DEFAULT_NODE_PLACEHOLDER_SIZE = 40;
 const DEFAULT_NODE_PLACEHOLDER_COLOR = 'rgb(240, 240, 240)';
 
 export default class MultiGraphExample extends Component {
+  static defaultProps = {
+    showNodePlaceholder: true,
+    showNodeCircle: true,
+    nodeColor: '#cf4569',
+    showNodeLabel: true,
+    nodeLabelColor: '#ffffff',
+    nodeLabelSize: 14,
+    edgeColor: '#cf4569',
+    edgeWidth: 2,
+    showEdgeLabel: true,
+    edgeLabelColor: '#000000',
+    edgeLabelSize: 14,
+  };
+
   render() {
     return (
       <GraphGL

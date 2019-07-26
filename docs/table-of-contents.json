@@ -32,6 +32,9 @@
             },
             {
               "entry": "docs/api-reference/viewport"
+            },
+            {
+              "entry": "docs/api-reference/layout"
             }
           ]
         },
@@ -60,6 +63,17 @@
             },
             {
               "entry": "docs/api-reference/edge-style-flow"
+            }
+          ]
+        },
+        {
+          "title": "Layouts",
+          "entries": [
+            {
+              "entry": "docs/api-reference/simple-layout"
+            },
+            {
+              "entry": "docs/api-reference/d3-layout"
             }
           ]
         },

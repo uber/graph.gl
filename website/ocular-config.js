@@ -61,7 +61,24 @@ module.exports = {
     },
   ],
 
-  PROJECTS: [],
+  PROJECTS: [
+    {
+      name: 'deck.gl',
+      url: 'https://deck.gl'
+    },
+    {
+      name: 'luma.gl',
+      url: 'https://luma.gl'
+    },
+    {
+      name: 'react-map-gl',
+      url: 'https://uber.github.io/react-map-gl'
+    },
+    {
+      name: 'react-vis',
+      url: 'https://uber.github.io/react-vis'
+    }
+  ],
 
   ADDITIONAL_LINKS: [
     {
@@ -73,10 +90,28 @@ module.exports = {
 
   EXAMPLES: [
     {
-      title: 'Graph Viewer',
+      title: 'Simple Graph Viewer',
       image: 'images/graph.png',
-      componentUrl: resolve(__dirname, '../examples/graph-viewer/index.js'),
-      path: 'examples/graph-viewer',
+      componentUrl: resolve(__dirname, '../examples/simple-graph-viewer/index.js'),
+      path: 'examples/simple-graph-viewer',
+    },
+    {
+      title: 'Hive Plot',
+      image: 'images/layouts/hive-plot.png',
+      componentUrl: resolve(__dirname, '../stories/hive-plot/app.js'),
+      path: 'examples/hive-plot',
+    },
+    {
+      title: 'Radial Layout',
+      image: 'images/layouts/radial.png',
+      componentUrl: resolve(__dirname, '../stories/radial-layout/app.js'),
+      path: 'examples/radial-layout',
+    },
+    {
+      title: 'MultiGraph',
+      image: 'images/layouts/multi-graph.png',
+      componentUrl: resolve(__dirname, '../stories/multi-graph-layout/app.js'),
+      path: 'examples/multi-graph',
     },
   ],
 

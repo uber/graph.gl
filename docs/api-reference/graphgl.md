@@ -68,7 +68,7 @@ const graph = JSONLoader({json: data});
 ```
 
 ### `layout` (Layout, required)
-Use one of the layouts provided by Graph.gl or create a new custom layout class by following the [instruction](/docs/advanced/custom-layout). Right now Graph.gl provides D3 and Simple layout for basic usage. There are more experimental layouts under `src/experimental-layouts`, please reference to the experimental layout [gallery](docs/experimental).
+Use one of the layouts provided by Graph.gl or create a new custom layout class by following the [instruction](/docs/advanced/custom-layout). For more detail, please see the [Layout](/docs/api-reference/layout) section.
 
 ### `initialViewState` (Object, optional)
 For more detail, please see [here](/docs/api-reference/viewport).
