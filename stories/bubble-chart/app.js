@@ -74,6 +74,10 @@ function generateGraph({
 class BubbleChartExample extends React.Component {
   state = {graph: null};
 
+  static defaultProps = {
+    opacity: 0.3,
+  };
+
   componentDidMount() {
     const graph = generateGraph({
       points: FeatureData,

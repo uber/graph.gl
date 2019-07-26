@@ -15,8 +15,8 @@ import SampleDatasetSelectorHOC from '../../utils/hocs/sample-dataset-selector-h
 const stories = storiesOf('Basic Layouts', module);
 
 // start to add examples
-import SimpleDoc from './simple.md';
-import D3Doc from './d3.md';
+import SimpleDoc from '../../docs/api-reference/simple-layout.md';
+import D3Doc from '../../docs/api-reference/d3-layout.md';
 
 stories.add(
   'Simple',

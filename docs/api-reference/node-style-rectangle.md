@@ -31,3 +31,8 @@ If a color value (hex code, color name, or array) is provided, it is used as the
 The width of the outline of each rectangle.
 If a number is provided, it is used as the outline width for all rectangles.
 If a function is provided, it is called on each rectangle to retrieve its outline width.
+
+
+## Source
+
+[Storybook example](https://github.com/uber/graph.gl/blob/master/stories/node-types/stories.js)

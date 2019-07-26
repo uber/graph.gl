@@ -5,13 +5,16 @@ Node accessors control the way how users want to render nodes. Layers provide th
 ### Usage
 Example of nodeStyle:
 ```js
-nodeStyle={[
-  {
-    type: NODE_TYPE.CIRCLE,
-    radius: 10,
-    color: '#f00'
-  },
-]}
+<GraphGL
+  {...shareProps}
+  nodeStyle={[
+    {
+      type: NODE_TYPE.CIRCLE,
+      radius: 10,
+      color: '#f00'
+    },
+  ]}
+/>
 ```
 
 ### `type` (String, required)
@@ -26,3 +29,8 @@ nodeStyle={[
 ### `scaleWithZoom` (Boolean, optional)
 - Default: `true`
 - If `scaleWithZoom` is true, the size of the element will be scaled according to the zoom level.
+
+
+## Source
+
+[Storybook example](https://github.com/uber/graph.gl/blob/master/stories/node-types/stories.js)
