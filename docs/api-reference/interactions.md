@@ -15,10 +15,11 @@ info: {
 }
 ```
 
- - onClick: This callback will be called when the mouse clicks on an node. Default: `null`.
- - onMouseEnter: This callback will be called when the mouse enter an node. Default: `null`.
- - onHover: This callback will be called when the mouse hovers over an node. Default: `null`.
- - onMouseLeave: This callback will be called when the mouse leaves an node. Default: `null`.
+ - onClick: This callback will be called when the mouse clicks on a node. Default: `null`.
+ - onMouseEnter: This callback will be called when the mouse enter a node. Default: `null`.
+ - onHover: This callback will be called when the mouse hovers over a node. Default: `null`.
+ - onMouseLeave: This callback will be called when the mouse leaves a node. Default: `null`.
+ - onDrag: This callback will be called when draggin a node. Default: `null`.
 
 
 ### `edgeEvents` (Object, optional)

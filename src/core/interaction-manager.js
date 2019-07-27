@@ -127,6 +127,7 @@ export default class InteractionManager {
     if (this.resumeLayoutAfterDragging) {
       this.engine.resume();
     }
+    info.object.setState(NODE_STATE.DEFAULT);
     this.engine.unlockNodePosition(info.object);
   }
 }
