@@ -1,6 +1,6 @@
 {
   "name": "graph.gl",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "WebGL2-Powered Visualization Components for Graph Visualization",
   "keywords": [
     "graph",
