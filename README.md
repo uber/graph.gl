@@ -13,7 +13,7 @@
 
 # Graph.gl
 
-<p align="center">:warning: This is work in progress. No support plan yet. :warning:</p>
+<p align="center">:warning: This project is no longer being actively developed or maintained due to priority changes. :warning:</p>
 
 ## Abstract
 Graph.gl is a React component for visualizing large graphs with several utility functions. It can build a highly customizable graph visualization through its composable API. The rendering is powered by deck.gl which is a WebGL based visualization framework.  With Graph.gl, users are enabled to build various type of graph/network applications with minimum efforts while having the capability to extend the existing styles and layouts.
